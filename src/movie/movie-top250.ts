@@ -1,5 +1,5 @@
-import { Browser } from "puppeteer";
-import { DBMovie } from "./movie-bean";
+import { Browser } from "puppeteer"
+import { DBMovie } from "./movie-bean"
 
 const top250Movies = async (browser: Browser, count: number): Promise<DBMovie[]> => {
     if (count === 0 || count > 10) throw new Error("page range is 1~10, please checked you request params.");

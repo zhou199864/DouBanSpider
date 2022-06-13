@@ -4,7 +4,7 @@ interface DBMovie{
     type: string;
     director: string;
     star: string;
-    quote: string;
+    quote?: string;
     detail: string;
 }
 

@@ -1,11 +1,11 @@
 import { Browser } from "puppeteer"
-import { DBBook } from "./book_bean";
+import { DBBook } from "./book_bean"
 
 
 const getbooks = async (browser: Browser, searchKeywords: string, spiderPage: number) => {
     if (spiderPage === 0) throw new Error("page can't zero!");
     spiderPage = (spiderPage - 1) * 15;
-    const reg = "#root .item-root"
+    const reg = "#root .item-root";
     const page = await browser.newPage();
     await page.goto(`https://search.douban.com/book/subject_search?search_text=${searchKeywords}&cat=1001&start=${spiderPage}`, { waitUntil: 'networkidle2' });
     await page.waitForSelector(reg);

@@ -1,4 +1,4 @@
-import express from 'express';
+import express from 'express'
 import { top250, getBooks } from '../router-handler/book-router-handler';
 
 const router = express.Router();

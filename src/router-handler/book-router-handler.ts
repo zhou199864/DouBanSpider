@@ -1,8 +1,8 @@
 import { top250Books } from "../book/book-top250"
 import { Request, Response } from "express"
-import { ok, error } from "../utils/response-msg";
-import { getInstance } from "../utils/browser";
-import { getbooks } from "../book/book-spider";
+import { ok, error } from "../utils/response-msg"
+import { getInstance } from "../utils/browser"
+import { getbooks } from "../book/book-spider"
 
 const top250 = async (req: Request, res: Response) => {
     const json = req.params;

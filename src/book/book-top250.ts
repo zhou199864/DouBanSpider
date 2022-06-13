@@ -1,5 +1,5 @@
-import { Browser } from "puppeteer";
-import { DBBook } from './book_bean';
+import { Browser } from "puppeteer"
+import { DBBook } from './book_bean'
 
 const top250Books = async (browser: Browser, count: number) => {
     if (count === 0 || count > 10) throw new Error("page range is 1~10, please checked you request params.");

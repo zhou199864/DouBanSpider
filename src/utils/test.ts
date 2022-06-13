@@ -2,6 +2,7 @@ import { top250Movies } from "../movie/movie-top250"
 import { getInstance } from "./browser";
 import { insertTop250Movie, insertTop250Book } from "./mysql-utils";
 import { top250Books } from "../book/book-top250";
+import { movieSearch } from "../movie/movie-spider";
 
 (async () => {
     // let count = 1;
@@ -17,4 +18,7 @@ import { top250Books } from "../book/book-top250";
     //     }
     //     count++;
     // }, 5000)
+    const data = await movieSearch(await getInstance(), "成龙", 2);
+    console.log(data);
+    
 })()
